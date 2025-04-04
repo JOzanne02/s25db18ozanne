@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+    p Welcome to #{title} but this time its lab 10
+    button.btn.btn-success(type="button", onclick="faster()") Press Me
+    div(id="faster") add in extra 
+    script. 
+        let value = 1;
+        let amt = 2;
+        const fasterDiv = document.getElementById("faster");
+        function faster(){
+          amt = amt * 2;
+          const result = amt + value;
+          fasterDiv.textContent =`faster ${amt} * ${value} = ${result}`;
+        }
+        
