@@ -2,5 +2,18 @@ extends layout
 
 block content
   h1= title
+  .container-fluid
+    .row
+      - 
+        const results =[
+          {style: 'ranch', sqft: 2300, price: 280000},
+          {style: 'victorian' sqft: 4100, price: 510000},
+          {style: 'craftsman', sqft: 3050, price: 407000}
+        ];
+
+      each item in results
+        .col-sm-2 
+          p Style: #{item.style}
+          p Price: $#{item.sqft}
+          p Bedrooms: $#{item.price}
     
-        
